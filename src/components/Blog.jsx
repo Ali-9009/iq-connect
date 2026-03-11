@@ -31,34 +31,21 @@ const blogPosts = [
         description:
             "Remote work has drastically improved my design skills by giving me the freedom to experiment, focus, and learn at my own pace.",
     },
-    {
-        image: "/images/post-image.png",
-        date: "22 July 2024",
-        readTime: "4 min",
-        description:
-            "Remote work has drastically improved my design skills by giving me the freedom to experiment, focus, and learn at my own pace.",
-    },
-    {
-        image: "/images/post-image.png",
-        date: "22 July 2024",
-        readTime: "4 min",
-        description:
-            "Remote work has drastically improved my design skills by giving me the freedom to experiment, focus, and learn at my own pace.",
-    },
-    {
-        image: "/images/post-image.png",
-        date: "22 July 2024",
-        readTime: "4 min",
-        description:
-            "Remote work has drastically improved my design skills by giving me the freedom to experiment, focus, and learn at my own pace.",
-    },
-    
 ];
 
 export default function BlogCarousel() {
+    // Detect mobile width
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
     const [selectedIndex, setSelectedIndex] = useState(0);
 
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 640);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    // Update selected index when carousel changes
     useEffect(() => {
         if (!emblaApi) return;
         const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -88,34 +75,49 @@ export default function BlogCarousel() {
                     </Link>
                 </div>
 
-                {/* Carousel */}
-                <div className="overflow-hidden relative" ref={emblaRef}>
-                    <div className="flex gap-6 pl-4 sm:pl-6">
-                        {blogPosts.map((post, idx) => (
-                            <div key={idx} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                                <div className="rounded-2xl border border-gray-200 p-4 flex flex-col h-full">
-                                    <img src={post.image} alt="" className="rounded-lg mb-4" />
-                                    <p className="text-[var(--light-black)] font-bold my-2">
-                                        {post.date} <span className="font-bold">•</span> {post.readTime}
-                                    </p>
-                                    <p className="text-[var(--light-black)] leading-relaxed">{post.description}</p>
+                {/* Mobile Carousel */}
+                {isMobile ? (
+                    <div className="overflow-hidden relative" ref={emblaRef}>
+                        <div className="flex gap-6 pl-4">
+                            {blogPosts.map((post, idx) => (
+                                <div key={idx} className="flex-none w-full">
+                                    <div className="rounded-2xl border border-gray-200 p-4 flex flex-col h-full">
+                                        <img src={post.image} alt="" className="rounded-lg mb-4" />
+                                        <p className="text-(--light-black) font-bold my-2">
+                                            {post.date} <span className="font-bold">•</span> {post.readTime}
+                                        </p>
+                                        <p className="text-(--light-black) leading-relaxed">{post.description}</p>
+                                    </div>
                                 </div>
+                            ))}
+                        </div>
+
+                        {/* Dots */}
+                        <div className="flex justify-center mt-6 gap-2">
+                            {blogPosts.map((_, idx) => (
+                                <button
+                                    key={idx}
+                                    className={`w-3 h-3 rounded-full transition-colors ${idx === selectedIndex ? "bg-(--primary-color)" : "bg-gray-300"
+                                        }`}
+                                    onClick={() => emblaApi.scrollTo(idx)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    // Desktop Grid
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {blogPosts.map((post, idx) => (
+                            <div key={idx} className="rounded-2xl border border-gray-200 p-4 flex flex-col h-full">
+                                <img src={post.image} alt="" className="rounded-lg mb-4" />
+                                <p className="text-(--light-black) font-bold my-2">
+                                    {post.date} <span className="font-bold">•</span> {post.readTime}
+                                </p>
+                                <p className="text-(--light-black) leading-relaxed">{post.description}</p>
                             </div>
                         ))}
                     </div>
-                </div>
-
-                {/* Dots */}
-                <div className="flex justify-center mt-6 gap-2">
-                    {blogPosts.map((_, idx) => (
-                        <button
-                            key={idx}
-                            className={`w-3 h-3 rounded-full transition-colors ${idx === selectedIndex ? "bg-[var(--primary-color)]" : "bg-gray-300"
-                                }`}
-                            onClick={() => emblaApi.scrollTo(idx)}
-                        />
-                    ))}
-                </div>
+                )}
             </div>
         </section>
     );

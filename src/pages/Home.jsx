@@ -2,7 +2,7 @@ import { useState } from "react";
 import ScheduleButton from "../components/Buttons/ScheduleButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import WhyIQConnect from "../components/WhyIqConnect";
+import WhyIQConnect from "../components/WhyIQConnect";
 import ScheduleModel from "../components/Models/ScheduleModel";
 import CtaSection from "../components/CtaSection";
 import Blog from "../components/Blog";
