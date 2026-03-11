@@ -64,6 +64,27 @@ function Home() {
         </section>
       </div>
 
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+            {partners.map((logo, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                <img
+                  src={logo}
+                  alt="partner logo"
+                  className="max-h-10 object-contain grayscale hover:grayscale-0 transition"
+                />
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       <section className="w-full bg-(--primary-color) text-white py-12 lg:mt-28 mt-4">
         <div className="main-section grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT — Image */}
@@ -222,27 +243,6 @@ function Home() {
 
         </div>
       </section> */}
-
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
-            {partners.map((logo, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition"
-              >
-                <img
-                  src={logo}
-                  alt="partner logo"
-                  className="max-h-10 object-contain grayscale hover:grayscale-0 transition"
-                />
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       <Testimonials />
 

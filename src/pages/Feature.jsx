@@ -64,7 +64,7 @@ function Feature() {
             {tabContent.map((item, index) => (
               <div key={index} className="relative group rounded-2xl p-0.5">
                 {/* Animated Border */}
-                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-[#2e4b7c] via-[#5e92ee] to-[#accaff] animate-gradient border-none"></div>
+                <div className="absolute inset-0 rounded-2xl border border-gray-200"></div>
 
                 {/* Card Content */}
                 <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 ">

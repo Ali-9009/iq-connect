@@ -124,32 +124,6 @@ function Contact() {
                       <p className="text-gray-600">8:00 AM – 5:00 PM AEST</p>
                     </div>
                   </div>
-
-                  {/* Social Icons */}
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold mb-3">Follow Us</p>
-
-                    <div className="flex gap-3">
-                      <a
-                        href="https://www.instagram.com/iqconnect"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 border border-(--primary-color) rounded-md hover:bg-(--primary-color) hover:text-white transition"
-                      >
-                        <Instagram size={16} />
-                      </a>
-
-                      <a
-                        href="https://www.youtube.com/@iqconnect_1"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 border border-(--primary-color) rounded-md hover:bg-(--primary-color) hover:text-white transition"
-                      >
-                        <Youtube size={16} />
-                      </a>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>

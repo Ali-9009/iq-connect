@@ -162,9 +162,7 @@ const solutionItems = [
 ];
 
 const socialLinks = [
-  { icon: <FacebookIcon />, label: "Facebook", url: "https://www.facebook.com/yourpage" },
   { icon: <InstagramIcon />, label: "Instagram", url: "https://www.instagram.com/iqconnect" },
-  { icon: <TwitterIcon />, label: "Twitter", url: "https://twitter.com/yourpage" },
   { icon: <Youtube />, label: "Youtube", url: "https://www.youtube.com/@iqconnect_1" },
 ];
 
@@ -530,15 +528,17 @@ function Header() {
         </nav>
 
         {/* Sidebar Footer — Social Icons */}
-        {/* <div className="px-6 py-5 border-t border-white/[0.07] flex-shrink-0">
+        <div className="px-6 py-5 border-t border-white/[0.07] flex-shrink-0">
           <p className="text-white/30 text-[11px] tracking-[0.09em] uppercase mb-3">
             Follow Us
           </p>
           <div className="flex gap-2.5">
-            {socialLinks.map(({ icon, label }) => (
+            {socialLinks.map(({ icon, label, url }) => (
               <a
                 key={label}
-                href="#"
+                href={url}  // <-- use the actual link here
+                target="_blank" // optional: open in new tab
+                rel="noopener noreferrer" // security best practice
                 aria-label={label}
                 className="w-[34px] h-[34px] border border-white/[0.15] rounded-lg flex items-center justify-center text-[#adc4d9] no-underline hover:border-[#4aa8e8] hover:text-white hover:bg-[#4aa8e8]/10 transition-all duration-200"
               >
@@ -546,7 +546,7 @@ function Header() {
               </a>
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );

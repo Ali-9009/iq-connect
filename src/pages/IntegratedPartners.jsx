@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const partners = [
-    "/images/Cricket.png",
+    "/images/1.png",
     "/images/20.webp",
     "/images/3.png",
     "/images/4.png",
