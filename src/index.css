@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* variables */
+:root {
+  --primary-color: #1a2943;
+  --black-color: #202020;
+  --light-black: #5d5d5d;
+}
+
+/* custom classes */
+@layer components {
+
+  /* sections */
+  .section {
+    @apply lg: mt-16 md:mt-12 mt-10;
+  }
+
+  .main-section {
+    @apply max-w-7xl mx-auto px-5 md: px-8;
+  }
+
+  .hero-section {
+    @apply text-center flex flex-col items-center px-5 md: px-8 lg:pt-28 lg:py-0 sm:py-16 py-12 gap-4;
+  }
+
+  /* headings */
+  .primary-heading {
+    @apply lg: text-4xl md:text-3xl text-[26px] text-(--primary-color) font-bold max-w-204 lg:leading-11;
+  }
+
+  .secondary-heading {
+    @apply lg: text-[32px] md:text-[28px] text-[24px] text-(--primary-color) font-semibold lg:leading-11;
+  }
+
+  .heading3 {
+    @apply font-semibold lg:text-xl text-lg text-(--primary-color);
+  }
+
+  .card-heading {
+    @apply font-bold lg: text-3xl text-2xl text-(--primary-color) text-center capitalize;
+  }
+
+  /* paragraphs */
+  .para1 {
+    @apply lg: text-lg text-(--primary-color);
+  }
+
+  .para4 {
+    @apply max-lg: text-sm text-(--primary-color) max-w-4xl mx-auto;
+  }
+
+  /* .para5 {
+    @apply 
+  } */
+
+  .para2 {
+    @apply text-(--light-black) leading-relaxed text-sm;
+  }
+
+  .small-para {
+    @apply text-(--light-black) leading-relaxed text-xs lg:text-sm;
+  }
+
+  .para3 {
+    @apply text-white leading-relaxed text-sm;
+  }
+
+  /* backgrounds */
+  /* .primary-background {
+    background: linear-gradient(
+      180deg,
+      #96c3dd 0%,
+      #5caae2 0%,
+      #a8d2ef 0%,
+      #ffffff 59.53%
+    );
+  } */
+  .secondary-background {
+    @apply bg-[#F0F7FE];
+  }
+
+  /* borders */
+  .border-light {
+    @apply border border-[#E9E9E9];
+  }
+
+  /* inputs */
+  .input-primary {
+    @apply border border-[#E9E9E9] rounded-lg px-4 py-2 text-sm outline-none focus: ring-2 focus:ring-(--primary-color);
+  }
+
+  /* buttons */
+  .card-btn {
+    @apply py-2 px-6 border-2 border-(--primary-color) text-(--primary-color) rounded-4xl w-full font-semibold hover: bg-(--primary-color) hover:text-white transition;
+  }
+}
+
+

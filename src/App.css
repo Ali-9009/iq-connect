@@ -1,0 +1,259 @@
+/* .primary-background {
+  background: linear-gradient(
+    180deg,
+    #96c3dd 0%,
+    #5caae2 0%,
+    #a8d2ef 0%,
+    #ffffff 59.53%
+  );
+} */
+
+.card-background {
+  background: linear-gradient(180deg,
+      #96c3dd 0%,
+      #5caae2 0%,
+      #a8d2ef 0%,
+      #ffffff 59.53%);
+
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.box-background {
+  background: linear-gradient(139.67deg, #96c3dd -34.93%, #cde3ff 91.33%);
+}
+
+/* shadows */
+
+.box-shadow {
+  box-shadow: -6px -3px 25px 0px #0000001a;
+}
+
+.btn-shadow {
+  box-shadow: 0px 0px 3px 0px #00000040;
+}
+
+.light-shadow {
+  box-shadow: 0px 0px 3px 0px #00000040;
+}
+
+.shadow1 {
+  box-shadow: 6.74px 8.42px 16.84px 0.84px #98989829;
+}
+
+.shadow2 {
+  box-shadow: -6px -3px 12px 0px #0000001a;
+}
+
+/* borders */
+.border-gradient {
+  border: 1px solid;
+
+  border-image-source:
+    linear-gradient(0deg, #efefef, #efefef),
+    linear-gradient(117.89deg, #96c3dd 0%, rgba(150, 195, 221, 0) 24%);
+}
+
+.input-border {
+  border: 1px solid #858585;
+}
+
+.file-input-border {
+  border: 2px solid #cdcdcd;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Swiper Container */
+.plansSwiper {
+  width: 100%;
+  padding: 24px 5px;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  padding-bottom: 10px;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* Plan Card Styling */
+.plan-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow:
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: black;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-btn:disabled {
+  background: rgba(156, 163, 175, 0.5);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ✅ Desktop only: Show arrows */
+@media (min-width: 1024px) {
+  .arrow-btn {
+    display: flex;
+  }
+}
+
+/* ✅ Mobile + Tablet: Hide arrows */
+@media (max-width: 1023px) {
+  .arrow-btn {
+    display: none;
+  }
+}
+
+/* Pagination Dots Styling */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: var(--primary-color) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+  width: 40px !important;
+  height: 12px !important;
+  border-radius: 10px !important;
+}
+
+/* ✅ Mobile only: Swiper active, pagination visible */
+@media (max-width: 767px) {
+  .swiper-wrapper {
+    display: flex !important;
+    align-items: start;
+  }
+
+  .swiper-pagination {
+    display: block;
+  }
+}
+
+/* ✅ Tablet: 2 column grid, no slider */
+@media (min-width: 768px) {
+  .plansSwiper {
+    overflow: visible !important;
+  }
+
+  .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    transform: none !important;
+    width: 100% !important;
+    transition: none !important;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination {
+    display: none !important;
+  }
+
+  .arrow-btn {
+    display: none !important;
+  }
+}
+
+/* ✅ Desktop: 3 column grid, no slider */
+@media (min-width: 1024px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+@keyframes logo-slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-slide {
+  animation: logo-slide 100s linear infinite;
+}
