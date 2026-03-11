@@ -57,50 +57,46 @@ function Feature() {
         </section>
       </div>
 
-      <section className="lg:mt-22 mt-4">
-        <div className="main-section">
+      <section className="lg:mt-22 mt-4 px-4">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tabContent.map((item, index) => (
+              <div key={index} className="relative group rounded-2xl p-0.5">
+                {/* Animated Border */}
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-[#2e4b7c] via-[#5e92ee] to-[#accaff] animate-gradient border-none"></div>
 
-          {/* Tab Pills */}
-          <div className="flex flex-nowrap lg:flex-wrap lg:justify-center gap-4 mb-12 overflow-x-auto">
-            {tabContent.map((tab, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveTab(i)}
-                className={`
-                  lg:px-6 px-4 shrink-0 lg:py-3 py-2 rounded-full border text-xs lg:text-sm font-medium transition-all duration-200
-                  ${
-                    activeTab === i
-                      ? "bg-(--primary-color) text-white border-(--primary-color)"
-                      : "bg-[#F3F3F3] text-[#12243A] border-none hover:bg-gray-200 btn-shadow"
-                  }
-                `}
-              >
-                {tab.label}
-              </button>
+                {/* Card Content */}
+                <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 ">
+                  <h3 className="text-xl font-semibold mb-4">{item.label}</h3>
+                  <p className="text-[#12243A] text-sm">{item.text}</p>
+                </div>
+              </div>
             ))}
           </div>
-
-          {/* Content Area */}
-          <div className="flex justify-center md:flex-row flex-col items-start gap-4 md:gap-8">
-
-            {/* Text — changes on tab click */}
-            <div className="md:w-[40%] lg:w-[30%]">
-              <p className="   md:mt-8">
-                {tabContent[activeTab].text}
-              </p>
-            </div>
-
-            {/* Image — stays the same */}
-            <div className="md:w-[60%] lg:w-[70%]">
-              <img
-                src="/images/dashboard2.png"
-                alt="Dashboard"
-                className="w-full"
-              />
-            </div>
-
-          </div>
         </div>
+
+        <style>
+          {`
+      @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient 4s linear infinite;
+      }
+      .relative.group > div.absolute {
+        mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        padding: 2px; /* thickness of border */
+      }
+    `}
+        </style>
       </section>
 
       <section className="w-full py-12 section secondary-background text-white mb-4">

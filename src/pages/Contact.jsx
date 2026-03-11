@@ -1,4 +1,4 @@
-import React from "react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -77,13 +77,80 @@ function Contact() {
                 </form>
               </div>
 
-              {/* RIGHT SIDE (Image) */}
+              {/* RIGHT SIDE (Contact Info) */}
               <div className="flex justify-center">
-                <img
-                  src="/images/contact-us.png" 
-                  alt="Contact"
-                  className="rounded-2xl lg:w-full md:max-w-lg object-cover shadow-lg"
-                />
+                <div className="lg:w-full md:max-w-lg p-8 space-y-6"> 
+
+                  {/* Phone */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-blue-100 rounded-lg">
+                      <Phone className="text-blue-600" size={20} />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Phone</p>
+                      <p className="text-gray-600">+1 (800) 123-4567</p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-green-100 rounded-lg">
+                      <Mail className="text-green-600" size={20} />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Email</p>
+                      <p className="text-gray-600">sales@iqconnect.com</p>
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-purple-100 rounded-lg">
+                      <MapPin className="text-purple-600" size={20} />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Address</p>
+                      <p className="text-gray-600">New York, United States</p>
+                    </div>
+                  </div>
+
+                  {/* Working Hours */}
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-orange-100 rounded-lg">
+                      <Clock className="text-orange-600" size={20} />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Working Hours</p>
+                      <p className="text-gray-600">8:00 AM – 5:00 PM AEST</p>
+                    </div>
+                  </div>
+
+                  {/* Social Icons */}
+                  <div className="pt-4 border-t">
+                    <p className="font-semibold mb-3">Follow Us</p>
+
+                    <div className="flex gap-3">
+                      <a
+                        href="https://www.instagram.com/iqconnect"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 border border-(--primary-color) rounded-md hover:bg-(--primary-color) hover:text-white transition"
+                      >
+                        <Instagram size={16} />
+                      </a>
+
+                      <a
+                        href="https://www.youtube.com/@iqconnect_1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 border border-(--primary-color) rounded-md hover:bg-(--primary-color) hover:text-white transition"
+                      >
+                        <Youtube size={16} />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>

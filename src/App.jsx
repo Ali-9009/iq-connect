@@ -20,6 +20,7 @@ import Step6 from "./pages/launch/Step6";
 import Insights from "./pages/Insights";
 import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./Layouts/Layout";
+import IntegratedPartners from "./pages/IntegratedPartners";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
       { path: "/terms-and-conditions", element: <Terms /> },
       { path: "/dmca", element: <Dmca /> },
       { path: "/insights", element: <Insights /> },
+      { path: "/integratedPartners", element: <IntegratedPartners /> },
     ],
   },
 ]);

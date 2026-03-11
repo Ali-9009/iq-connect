@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
@@ -85,15 +85,23 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              <div className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition">
-                <Facebook size={18} />
-              </div>
-              <div className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition">
-                <Instagram size={18} />
-              </div>
-              <div className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition">
-                <Twitter size={18} />
-              </div>
+                <a
+                  href="https://www.instagram.com/iqconnect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+                >
+                  <Instagram size={16} />
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@iqconnect_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+                >
+                  <Youtube size={16} />
+                </a>
             </div>
           </div>
         </div>

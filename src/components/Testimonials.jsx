@@ -1,7 +1,5 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 const testimonials = [
     {
@@ -27,49 +25,55 @@ const testimonials = [
 ];
 
 export default function TestimonialCarousel() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 700,
-        slidesToShow: 4,   // 2 columns
-        rows: 1,           // 2 rows = total 4 cards
-        slidesPerRow: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    rows: 2,
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    rows: 1, // mobile = 2 stacked
-                },
-            },
-        ],
-    };
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    // Update selectedIndex whenever slide changes
+    useEffect(() => {
+        if (!emblaApi) return;
+
+        const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+        emblaApi.on("select", onSelect);
+        onSelect();
+
+        return () => emblaApi.off("select", onSelect);
+    }, [emblaApi]);
+
+    // Optional autoplay
+    useEffect(() => {
+        if (!emblaApi) return;
+        const interval = setInterval(() => emblaApi.scrollNext(), 5000);
+        return () => clearInterval(interval);
+    }, [emblaApi]);
 
     return (
         <section className="max-w-7xl mx-auto py-12 px-4">
-            <h2 className="secondary-heading text-center mb-8">
-                What Our Clients Say
-            </h2>
+            <h2 className="secondary-heading text-center mb-8">What Our Clients Say</h2>
 
-            <Slider {...settings}>
-                {testimonials.map((t, idx) => (
-                    <div key={idx} className="p-3">
-                        <div className="rounded-2xl border border-gray-200 shadow-md p-6 h-full flex flex-col justify-between hover:scale-[1.02] transition">
-                            <p className=" italic mb-4">"{t.text}"</p>
-                            <p className="font-semibold mt-4">{t.author}</p>
+            <div className="overflow-hidden relative" ref={emblaRef}>
+                <div className="flex">
+                    {testimonials.map((t, idx) => (
+                        <div key={idx} className="flex-none px-3 w-full sm:w-1/2 lg:w-1/4">
+                            <div className="rounded-2xl border border-gray-200 p-6 h-full flex flex-col justify-between ">
+                                <p className="italic mb-4">"{t.text}"</p>
+                                <p className="font-semibold mt-4">{t.author}</p>
+                            </div>
                         </div>
-                    </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Dots */}
+            <div className="flex justify-center mt-6 gap-2">
+                {testimonials.map((_, idx) => (
+                    <button
+                        key={idx}
+                        className={`w-3 h-3 rounded-full transition-colors ${idx === selectedIndex ? "bg-(--primary-color)" : "bg-gray-300"
+                            }`}
+                        onClick={() => emblaApi.scrollTo(idx)}
+                    />
                 ))}
-            </Slider>
+            </div>
         </section>
     );
 }

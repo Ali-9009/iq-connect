@@ -8,6 +8,31 @@ import CtaSection from "../components/CtaSection";
 import Blog from "../components/Blog";
 import Testimonials from "../components/Testimonials";
 
+const partners = [
+  "/images/Cricket.png",
+  "/images/Claro.png",
+  "/images/Cubacel.png",
+  "/images/Digicel.png",
+  "/images/Boost.png",
+  "/images/H2O.png",
+  "/images/Link Up.png",
+  "/images/Lyca.png",
+  "/images/MetroPCS.png",
+  "/images/MobileX.png",
+  "/images/Net10.png",
+  "/images/Qué Tal Mobile.png",
+  "/images/2.png",
+  "/images/Red Pocket Mobile.png",
+  "/images/Simple Mobile.png",
+  "/images/U2C - AT&T.png",
+  "/images/Ultra.png",
+  "/images/Xfinity.png",
+  "/images/AT&T.png",
+  "/images/T-Mobile.png",
+  "/images/Verizon.png",
+];
+
+
 function Home() {
   const [isOpenSchedule, setIsOpenSchedule] = useState(false);
 
@@ -144,61 +169,11 @@ function Home() {
         </div>
       </section>
 
-      {/* <section className="section">
-        <div className="main-section">
-          <div className="flex lg:flex-row flex-col-reverse items-center gap-4 lg:gap-6">
-         
-            <div className="lg:w-[50%] max-w-2xl mx-auto flex justify-center">
-              <img src="/images/advanced-analytic.png" alt="" />
-            </div>
-    
-            <div className=" lg:w-[50%] space-y-6">
-              <h2 className="secondary-heading ">Features That Power Growth</h2>
-              <div>
-                <h6 className="font-semibold text-(--primary-color)">
-                  Advanced Reporting & Analytics
-                </h6>
-                <p className="para2">
-                  Gain real-time insights with customizable dashboards,
-                  transaction reporting, and performance analytics built for
-                  telecom decision-making.
-                </p>
-              </div>
-
-              <div>
-                <h6 className="font-semibold text-(--primary-color)">
-                  Dealer & Subscriber Portals
-                </h6>
-                <p className="para2">
-                  Fully brandable portals for dealers and subscribers—designed
-                  for speed, simplicity, and conversion.
-                </p>
-              </div>
-
-              <div>
-                <h6 className="font-semibold text-(--primary-color)">
-                  Enterprise-Grade Security
-                </h6>
-                <p className="para2">
-                  We protect your data with strict access controls, encryption,
-                  monitoring, and compliance best practices.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <Blog />
-
-      <Testimonials />
-
-      <section className="px-4 py-10 overflow-hidden">
+      {/* <section className="px-4 py-10 overflow-hidden">
         <div className="relative">
 
           <div className="flex gap-16 w-max animate-logo-slide items-center">
 
-            {/* SET 1 */}
             <img src="/images/Cricket.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Claro.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Cubacel.png" alt="Logo" className="h-10 w-auto" />
@@ -221,7 +196,6 @@ function Home() {
             <img src="/images/T-Mobile.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Verizon.png" alt="Logo" className="h-10 w-auto" />
 
-            {/* DUPLICATE */}
             <img src="/images/Cricket.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Claro.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Cubacel.png" alt="Logo" className="h-10 w-auto" />
@@ -244,12 +218,37 @@ function Home() {
             <img src="/images/T-Mobile.png" alt="Logo" className="h-10 w-auto" />
             <img src="/images/Verizon.png" alt="Logo" className="h-10 w-auto" />
 
+          </div>
+
+        </div>
+      </section> */}
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+            {partners.map((logo, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                <img
+                  src={logo}
+                  alt="partner logo"
+                  className="max-h-10 object-contain grayscale hover:grayscale-0 transition"
+                />
+              </div>
+            ))}
           </div>
 
         </div>
       </section>
 
+      <Testimonials />
+
       <CtaSection />
+
+      <Blog />
 
       <Footer />
     </main>

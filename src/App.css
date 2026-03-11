@@ -257,3 +257,20 @@
 .animate-logo-slide {
   animation: logo-slide 100s linear infinite;
 }
+
+
+/* testimonial scroll bar */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 35s linear infinite;
+}

@@ -185,7 +185,7 @@ function Header() {
       <header className="sticky top-2 mx-2 z-[10] bg-(--primary-color) rounded-bl-xl rounded-br-xl">
         {/* ── Top Info Bar ── */}
         <div className="md:block hidden">
-          <div className="max-w-7xl mx-auto px-5 md:px-8 py-2.5 flex items-center justify-between flex-wrap gap-3">
+          <div className="max-w-360 mx-auto px-5 md:px-8 py-2.5 flex items-center justify-between flex-wrap gap-3">
             {/* Left: Email & Hours */}
             <div className="flex items-start gap-7 flex-wrap text-white">
               <a
@@ -200,7 +200,6 @@ function Header() {
             </div>
 
             {/* Right: Social Icons */}
-            {/* Social Icons */}
             <div className="flex items-center gap-4 text-white">
               
               <a
@@ -226,7 +225,7 @@ function Header() {
 
         {/* ── Main Nav Bar ── */}
         <div className="">
-          <div className="max-w-7xl mx-auto px-8 flex items-center justify-between h-[70px]">
+          <div className="max-w-360 mx-auto px-8 flex items-center justify-between py-6">
            <Link to="/"> <img src="/logo.png" className="lg:w-38 w-30" alt="" /></Link>
 
             {/* Desktop Nav */}
@@ -323,6 +322,19 @@ function Header() {
                 }
               >
                 Launch Your MVNO
+              </NavLink>
+
+              <NavLink
+                to="/integratedPartners"
+                className={({ isActive }) =>
+                  `text-[15px] px-4 py-2 border-b-2 whitespace-nowrap transition
+      ${isActive
+                    ? "text-white border-[#4aa8e8] font-semibold"
+                    : "text-white/70 border-transparent hover:text-white"
+                  }`
+                }
+              >
+                Integrated partners
               </NavLink>
 
               {/* Contact */}
@@ -484,6 +496,20 @@ function Header() {
             }
           >
             Launch Your MVNO
+          </NavLink>
+
+          <NavLink
+            to="/integratedPartners"
+            onClick={closeSidebar}
+            className={({ isActive }) =>
+              `flex items-center px-6 py-3.5 text-[15px] border-l-[3px]
+      ${isActive
+                ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
+                : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
+              }`
+            }
+          >
+            Integrated partners
           </NavLink>
 
           {/* Contact */}
