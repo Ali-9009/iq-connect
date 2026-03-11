@@ -202,15 +202,7 @@ function Header() {
             {/* Right: Social Icons */}
             {/* Social Icons */}
             <div className="flex items-center gap-4 text-white">
-              <a
-                href="https://www.facebook.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition"
-              >
-                <Facebook size={16} />
-              </a>
-
+              
               <a
                 href="https://www.instagram.com/iqconnect"
                 target="_blank"
@@ -218,15 +210,6 @@ function Header() {
                 className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition"
               >
                 <Instagram size={16} />
-              </a>
-
-              <a
-                href="https://twitter.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 border border-white rounded-md hover:bg-white hover:text-black transition"
-              >
-                <Twitter size={16} />
               </a>
 
               <a

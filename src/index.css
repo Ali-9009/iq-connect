@@ -19,24 +19,24 @@
 
   /* sections */
   .section {
-    @apply lg: mt-16 md:mt-12 mt-10;
+    @apply lg:mt-16 md:mt-12 mt-10;
   }
 
   .main-section {
-    @apply max-w-7xl mx-auto px-5 md: px-8;
+    @apply max-w-7xl mx-auto px-5 md:px-8;
   }
 
   .hero-section {
-    @apply text-center flex flex-col items-center px-5 md: px-8 lg:pt-28 lg:py-0 sm:py-16 py-12 gap-4;
+    @apply text-center flex flex-col items-center px-5 md:px-8 lg:pt-28 lg:py-0 sm:py-16 py-12 gap-4;
   }
 
   /* headings */
   .primary-heading {
-    @apply lg: text-4xl md:text-3xl text-[26px] text-(--primary-color) font-bold max-w-204 lg:leading-11;
+    @apply lg:text-4xl md:text-3xl text-[26px] text-(--primary-color) font-bold max-w-204 lg:leading-11;
   }
 
   .secondary-heading {
-    @apply lg: text-[32px] md:text-[28px] text-[24px] text-(--primary-color) font-semibold lg:leading-11;
+    @apply lg:text-[32px] md:text-[28px] text-[24px] text-(--primary-color) font-semibold lg:leading-11;
   }
 
   .heading3 {
@@ -44,16 +44,16 @@
   }
 
   .card-heading {
-    @apply font-bold lg: text-3xl text-2xl text-(--primary-color) text-center capitalize;
+    @apply font-bold lg:text-3xl text-2xl text-(--primary-color) text-center capitalize;
   }
 
   /* paragraphs */
   .para1 {
-    @apply lg: text-lg text-(--primary-color);
+    @apply lg:text-lg text-(--primary-color);
   }
 
   .para4 {
-    @apply max-lg: text-sm text-(--primary-color) max-w-4xl mx-auto;
+    @apply max-lg:text-sm text-(--primary-color) max-w-4xl mx-auto;
   }
 
   /* .para5 {
@@ -93,12 +93,12 @@
 
   /* inputs */
   .input-primary {
-    @apply border border-[#E9E9E9] rounded-lg px-4 py-2 text-sm outline-none focus: ring-2 focus:ring-(--primary-color);
+    @apply border border-[#E9E9E9] rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-(--primary-color);
   }
 
   /* buttons */
   .card-btn {
-    @apply py-2 px-6 border-2 border-(--primary-color) text-(--primary-color) rounded-4xl w-full font-semibold hover: bg-(--primary-color) hover:text-white transition;
+    @apply py-2 px-6 border-2 border-(--primary-color) text-(--primary-color) rounded-4xl w-full font-semibold hover:bg-(--primary-color) hover:text-white transition;
   }
 }
 
