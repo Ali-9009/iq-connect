@@ -8,28 +8,53 @@ import CtaSection from "../components/CtaSection";
 import Blog from "../components/Blog";
 import Testimonials from "../components/Testimonials";
 
+// const partners = [
+//   "/images/Cricket.png",
+//   "/images/Claro.png",
+//   "/images/Cubacel.png",
+//   "/images/Digicel.png",
+//   "/images/Boost.png",
+//   "/images/H2O.png",
+//   "/images/Link Up.png",
+//   "/images/Lyca.png",
+//   "/images/MetroPCS.png",
+//   "/images/MobileX.png",
+//   "/images/Net10.png",
+//   "/images/Qué Tal Mobile.png",
+//   "/images/2.png",
+//   "/images/Red Pocket Mobile.png",
+//   "/images/Simple Mobile.png",
+//   "/images/U2C - AT&T.png",
+//   "/images/Ultra.png",
+//   "/images/Xfinity.png",
+//   "/images/AT&T.png",
+//   "/images/T-Mobile.png",
+//   "/images/Verizon.png",
+// ];
+
 const partners = [
-  "/images/Cricket.png",
-  "/images/Claro.png",
-  "/images/Cubacel.png",
-  "/images/Digicel.png",
-  "/images/Boost.png",
-  "/images/H2O.png",
-  "/images/Link Up.png",
-  "/images/Lyca.png",
-  "/images/MetroPCS.png",
-  "/images/MobileX.png",
-  "/images/Net10.png",
-  "/images/Qué Tal Mobile.png",
-  "/images/2.png",
-  "/images/Red Pocket Mobile.png",
-  "/images/Simple Mobile.png",
-  "/images/U2C - AT&T.png",
-  "/images/Ultra.png",
-  "/images/Xfinity.png",
-  "/images/AT&T.png",
-  "/images/T-Mobile.png",
-  "/images/Verizon.png",
+  "/images/1.png",
+  "/images/20.webp",
+  "/images/3.png",
+  "/images/4.png",
+  "/images/5.png",
+  "/images/6.png",
+  "/images/7.png",
+  "/images/8.png",
+  "/images/9.jpg",
+  "/images/10.jpg",
+  "/images/11.png",
+  "/images/12.webp",
+  "/images/13.png",
+  "/images/14.png",
+  "/images/15.png",
+  "/images/16.png",
+  "/images/17.png",
+  "/images/18.png",
+  "/images/19.webp",
+  "/images/21.png",
+  "/images/22.png",
+
 ];
 
 
@@ -65,9 +90,8 @@ function Home() {
       </div>
 
       <section className="py-12">
-        
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="secondary-heading text-center mb-12">Trusted by Industry Leaders</h2>
+          <h2 className="secondary-heading text-center mb-12">Integrated partners</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
             {partners.map((logo, index) => (
               <div

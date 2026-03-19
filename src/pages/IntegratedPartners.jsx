@@ -13,17 +13,15 @@ const partners = [
     "/images/9.jpg",
     "/images/10.jpg",
     "/images/11.png",
-
     "/images/12.webp",
     "/images/13.png",
     "/images/14.png",
     "/images/15.png",
     "/images/16.png",
-
     "/images/17.png",
     "/images/18.png",
     "/images/19.webp",
-    "/images/21.avif",
+    "/images/21.png",
     "/images/22.png",
 
 ];
@@ -37,7 +35,7 @@ const IntegrationPartners = () => {
                 <div className="max-w-7xl mx-auto px-6">
 
                     <h2 className="secondary-heading text-center mb-12">
-                        Integration partners
+                        Integrated partners
                     </h2>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
