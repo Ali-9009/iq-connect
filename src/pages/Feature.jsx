@@ -42,7 +42,7 @@ function Feature() {
 
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] primary-background -z-1"></div>
+      <div className="absolute top-0 left-0 w-full primary-background -z-1"></div>
         <Header />
       <div className="px-2 pt-2 ">
 
@@ -59,7 +59,6 @@ function Feature() {
 
       <section className="lg:mt-22 mt-4 px-4">
         <div className="max-w-7xl mx-auto">
-          
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tabContent.map((item, index) => (
               <div key={index} className="relative group rounded-2xl p-0.5">
@@ -75,28 +74,6 @@ function Feature() {
             ))}
           </div>
         </div>
-
-        <style>
-          {`
-      @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      .animate-gradient {
-        background-size: 200% 200%;
-        animation: gradient 4s linear infinite;
-      }
-      .relative.group > div.absolute {
-        mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: destination-out;
-        mask-composite: exclude;
-        padding: 2px; /* thickness of border */
-      }
-    `}
-        </style>
       </section>
 
       <section className="w-full py-12 section secondary-background text-white mb-4">
