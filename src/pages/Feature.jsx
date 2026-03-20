@@ -57,7 +57,7 @@ function Feature() {
         </section>
       </div>
 
-      <section className="lg:mt-22 mt-4 px-4">
+      <section className=" mt-4 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tabContent.map((item, index) => (
