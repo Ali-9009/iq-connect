@@ -231,29 +231,33 @@ function Header() {
               {/* Home */}
               <NavLink
                 to="/"
-                className={({ isActive }) =>
-                  `text-[15px] px-4 py-2 pb-1.5 no-underline border-b-2 transition
-      ${
-        isActive
-          ? "text-white border-[#4aa8e8] font-semibold"
-          : "text-white/70 border-transparent hover:text-white"
-      }`
-                }
+                className={() => {
+                  const isActive =
+                    location.pathname === "/" && location.hash !== "#feature";
+
+                  return `text-[15px] px-4 py-2 pb-1.5 border-b-2 transition
+    ${isActive
+                      ? "text-white border-[#4aa8e8] font-semibold"
+                      : "text-white/70 border-transparent hover:text-white"
+                    }`;
+                }}
               >
                 Home
               </NavLink>
 
               {/* Feature */}
               <NavLink
-                to="/feature"
-                className={({ isActive }) =>
-                  `text-[15px] px-4 py-2 border-b-2 transition
-      ${
-        isActive
-          ? "text-white border-[#4aa8e8] font-semibold"
-          : "text-white/70 border-transparent hover:text-white"
-      }`
-                }
+                to="/#feature"
+                className={() => {
+                  const isActive =
+                    location.pathname === "/" && location.hash === "#feature";
+
+                  return `text-[15px] px-4 py-2 border-b-2 transition
+    ${isActive
+                      ? "text-white border-[#4aa8e8] font-semibold"
+                      : "text-white/70 border-transparent hover:text-white"
+                    }`;
+                }}
               >
                 Feature
               </NavLink>
@@ -409,31 +413,29 @@ function Header() {
           {/* Home */}
           <NavLink
             to="/"
-            onClick={closeSidebar}
-            className={({ isActive }) =>
-              `flex items-center px-6 py-3.5 text-[15px] border-l-[3px] transition-all duration-200
-      ${
-        isActive
-          ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
-          : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
-      }`
-            }
+            className={() => {
+              const isActive = location.pathname === "/" && location.hash === "";
+
+              return `...same styles ${isActive ? "ACTIVE_CLASSES" : "INACTIVE_CLASSES"
+                }`;
+            }}
           >
             Home
           </NavLink>
 
           {/* Feature */}
           <NavLink
-            to="/feature"
+            to="/#feature"
             onClick={closeSidebar}
-            className={({ isActive }) =>
-              `flex items-center px-6 py-3.5 text-[15px] border-l-[3px] border-b border-b-white/[0.05]
-      ${
-        isActive
-          ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
-          : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
-      }`
-            }
+            className={() => {
+              const isActive = location.pathname === "/" && location.hash === "#feature";
+
+              return `flex items-center px-6 py-3.5 text-[15px] border-l-[3px] border-b border-b-white/[0.05]
+    ${isActive
+                  ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
+                  : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
+                }`;
+            }}
           >
             Feature
           </NavLink>

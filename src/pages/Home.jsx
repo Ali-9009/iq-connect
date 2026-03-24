@@ -5,8 +5,8 @@ import Header from "../components/Header";
 import WhyIQConnect from "../components/WhyIQConnect";
 import ScheduleModel from "../components/Models/ScheduleModel";
 import CtaSection from "../components/CtaSection";
-import Blog from "../components/Blog";
 import Testimonials from "../components/Testimonials";
+import Feature from "./Feature"
 
 // const partners = [
 //   "/images/Cricket.png",
@@ -269,11 +269,11 @@ function Home() {
         </div>
       </section> */}
 
+      <Feature />
+
       <Testimonials />
 
       <CtaSection />
-
-      <Blog />
 
       <Footer />
     </main>

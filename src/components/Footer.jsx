@@ -35,8 +35,8 @@ export default function Footer() {
                 <li><Link to='/'>HOME</Link></li>
                 <li><Link to='/feature'>FEATURE</Link></li>
                 <li><Link to='/launch'>LAUNCH YOUR MVNO</Link></li>
-                <li><Link to='/insights'>INSIGHTS</Link></li>
                 <li><Link to='/contact'>CONTACT US</Link></li>
+                <li><Link to='/insights'>BLOG</Link></li>
               </ul>
             </div>
 

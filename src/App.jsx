@@ -2,7 +2,6 @@ import "./App.css";
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
 import Header from "./components/Header";
-import Feature from "./pages/Feature";
 import Kiosk from "./pages/Kiosk";
 import DistributionPortal from "./pages/DistributionPortal";
 import TaxationAndRegulatorySolutions from "./pages/Taxation&RegulatorySolutions";
@@ -27,7 +26,6 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/feature", element: <Feature /> },
       { path: "/solutions/kiosk", element: <Kiosk /> },
       { path: "/solutions/distribution-portal", element: <DistributionPortal /> },
       { path: "/solutions/taxation-&-regulatory-solutions", element: <TaxationAndRegulatorySolutions /> },
