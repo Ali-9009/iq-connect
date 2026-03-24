@@ -413,23 +413,6 @@ function Header() {
             Home
           </NavLink>
 
-          {/* Feature */}
-          <NavLink
-            to="/#feature"
-            onClick={closeSidebar}
-            className={() => {
-              const isActive = location.pathname === "/" && location.hash === "#feature";
-
-              return `flex items-center px-6 py-3.5 text-[15px] border-l-[3px] border-b border-b-white/[0.05]
-    ${isActive
-                  ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
-                  : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
-                }`;
-            }}
-          >
-            Feature
-          </NavLink>
-
           {/* Solutions Accordion */}
           <div className="border-b border-white/[0.05]">
             <button
