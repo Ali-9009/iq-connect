@@ -28,7 +28,7 @@ function DistributionPortal() {
         </section>
       </div>
 
-      <section className="lg:mt-28">
+      <section className="lg:mt-">
         <div className="main-section">
           <div>
             <h2 className="secondary-heading text-center mb-2">

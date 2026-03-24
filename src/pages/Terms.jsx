@@ -8,8 +8,8 @@ function Terms() {
         <Header />
       <div className="px-2 pt-2 ">
 
-        <section className="px-3 md:px-8 lg:pt-16 lg:py-0 py-16">
-          <h1 className="secondary-heading mb-8">Terms Of Service</h1>
+        <section className="px-3 md:px-8 lg:pt-12 lg:py-0 py-12">
+          <h1 className="secondary-heading text-center mb-8">Terms Of Service</h1>
 
           <div className="space-y-5 text-(--primary-color) capitalize">
             <p>

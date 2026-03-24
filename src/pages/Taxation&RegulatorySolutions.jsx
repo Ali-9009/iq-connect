@@ -38,7 +38,7 @@ function TaxationAndRegulatorySolutions() {
         </section>
       </div>
 
-      <section className="py-12 lg:mt-28 mt-4 bg-(--primary-color) text-white">
+      <section className="py-12 lg:mt- mt-4 bg-(--primary-color) text-white">
         <div className="main-section grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT — Image */}
           <div className="flex justify-center md:justify-center">
