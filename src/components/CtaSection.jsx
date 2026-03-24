@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 export default function CtaSection() {
     return (
         <main className="px-6">
@@ -18,11 +20,9 @@ export default function CtaSection() {
 
                     {/* CTA Button */}
                     <div className="mt-10">
-                        <button
-                            className="py-2 px-6 border-2 border-white text-white rounded-4xl hover:bg-(--primary-color) hover:text-white transition"
-                        >
+                        <Link to="/contact" className="py-2 px-6 border-2 border-white text-white rounded-4xl hover:bg-(--primary-color) hover:text-white transition">
                             Get a Custom Demo
-                        </button>
+                        </Link>
                     </div>
 
                 </div>
