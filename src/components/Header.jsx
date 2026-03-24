@@ -245,23 +245,6 @@ function Header() {
                 Home
               </NavLink>
 
-              {/* Feature */}
-              <NavLink
-                to="/#feature"
-                className={() => {
-                  const isActive =
-                    location.pathname === "/" && location.hash === "#feature";
-
-                  return `text-[15px] px-4 py-2 border-b-2 transition
-    ${isActive
-                      ? "text-white border-[#4aa8e8] font-semibold"
-                      : "text-white/70 border-transparent hover:text-white"
-                    }`;
-                }}
-              >
-                Feature
-              </NavLink>
-
               {/* Solutions Dropdown */}
               <div
                 className="relative"

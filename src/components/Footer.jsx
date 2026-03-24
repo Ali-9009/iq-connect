@@ -33,7 +33,6 @@ export default function Footer() {
               <h3 className="font-semibold md:text-lg mb-5">Quick Links</h3>
               <ul className="space-y-3 font-light text-xs sm:text-sm">
                 <li><Link to='/'>HOME</Link></li>
-                <li><Link to='/#feature'>FEATURE</Link></li>
                 <li><Link to='/launch'>LAUNCH YOUR MVNO</Link></li>
                 <li><Link to='/contact'>CONTACT US</Link></li>
                 <li><Link to='/insights'>BLOG</Link></li>
