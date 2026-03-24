@@ -413,10 +413,17 @@ function Header() {
           {/* Home */}
           <NavLink
             to="/"
+            onClick={closeSidebar}
             className={() => {
-              const isActive = location.pathname === "/" && location.hash === "";
+              const isHome = location.pathname === "/";
+              const isFeature = location.hash === "#feature";
 
-              return `...same styles ${isActive ? "ACTIVE_CLASSES" : "INACTIVE_CLASSES"
+              const isActive = isHome && !isFeature;
+
+              return `flex items-center px-6 py-3.5 text-[15px] border-l-[3px]
+    ${isActive
+                  ? "text-[#4aa8e8] border-[#4aa8e8] bg-[#4aa8e8]/[0.07] font-semibold"
+                  : "text-white/75 border-transparent hover:text-white hover:border-l-[#4aa8e8]"
                 }`;
             }}
           >
