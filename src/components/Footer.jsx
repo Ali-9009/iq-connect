@@ -34,6 +34,7 @@ export default function Footer() {
               <ul className="space-y-3 font-light text-xs sm:text-sm">
                 <li><Link to='/'>HOME</Link></li>
                 <li><Link to='/launch'>LAUNCH YOUR MVNO</Link></li>
+                  <li><Link to='/integratedPartners'>INTEGRATED PARTNERS</Link></li>
                 <li><Link to='/contact'>CONTACT US</Link></li>
                 <li><Link to='/insights'>BLOG</Link></li>
               </ul>

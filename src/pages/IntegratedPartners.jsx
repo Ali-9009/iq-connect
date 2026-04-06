@@ -20,7 +20,6 @@ const partners = [
     "/images/13.png",
     "/images/14.png",
     "/images/15.png",
-    "/images/16.png",
     "/images/17.png",
     "/images/18.png",
     "/images/19.webp",

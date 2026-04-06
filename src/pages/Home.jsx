@@ -7,6 +7,7 @@ import ScheduleModel from "../components/Models/ScheduleModel";
 import CtaSection from "../components/CtaSection";
 import Testimonials from "../components/Testimonials";
 import Feature from "./Feature"
+import FAQ from "../components/Faqs";
 
 // const partners = [
 //   "/images/Cricket.png",
@@ -48,7 +49,6 @@ const partners = [
   "/images/13.png",
   "/images/14.png",
   "/images/15.png",
-  "/images/16.png",
   "/images/17.png",
   "/images/18.png",
   "/images/19.webp",
@@ -270,6 +270,8 @@ function Home() {
       </section> */}
 
       <Feature />
+
+      <FAQ />
 
       <Testimonials />
 

@@ -2,54 +2,74 @@ import { useState } from "react";
 
 const faqs = [
     {
-        question: "1. Does iQ Connect work with AT&T, T-Mobile, and Verizon simultaneously?",
+        question: "Who is iQ Connect built for?",
         answer:
-            "Yes. iQ Connect comes pre-integrated with all three major carriers, allowing you to manage activations and billing from a single platform without switching between systems.",
+            "iQ Connect is designed for mobile virtual network operators (MVNOs), distributors, retailers, digital marketplaces, and IoT/M2M operators who need a centralized platform to manage activations, billing, and subscribers — without relying on multiple disconnected legacy systems.",
     },
     {
-        question: "2. How long does it take to integrate iQ Connect with my current operation?",
+        question: "Which carriers does iQ Connect support?",
         answer:
-            "API integration can be completed in just a few days. Developers have synced retail websites and fully automated activations — like Simple Mobile and Ultra — within that same timeframe.",
+            "iQ Connect has pre-built integrations with AT&T, T-Mobile, and Verizon, with full support for both GSM and CDMA models. This means you can operate under different MVNO programs without building carrier connections from scratch.",
     },
     {
-        question: "3. Does the system support prepaid, postpaid, and hybrid billing models?",
+        question: "How quickly can I get up and running?",
         answer:
-            "Yes. iQ Connect’s convergent billing engine is built for all three models, with PCI compliance included out of the box.",
+            "Thanks to pre-integrated carrier connections and developer-friendly API documentation, operators can sync their retail website and fully automate activations within days — not months. No need to rebuild existing systems or open physical operations to enter new markets.",
     },
     {
-        question: "4. Can I manage a distributor or franchise network with real-time commissions?",
+        question: "Can I use my own branding on the platform?",
         answer:
-            "Yes. The platform handles complex dealer and retailer hierarchies with real-time commission tracking for both GSM and CDMA MVNO models.",
+            "Yes. iQ Connect includes fully white-labeled dealer portals and retail websites. Your brand, your colors, your customer experience — all powered by iQ Connect’s infrastructure without your end customers ever knowing what’s running behind the scenes.",
     },
     {
-        question: "5. Are the dealer portals white-labeled with my brand?",
+        question: "How does the Partner Portal work?",
         answer:
-            "Fully. Every dealer portal and interface can be customized to reflect your brand — no iQ Connect branding visible to your end users.",
+            "The Partner Portal lets you define multiple distribution points with custom pricing, permissions, and access controls per partner. You can manage activations, refills, and monitor performance across your entire distribution network from a single dashboard.",
     },
     {
-        question: "6. What uptime does the platform guarantee?",
+        question: "Does the platform support prepaid, postpaid, or both?",
         answer:
-            "iQ Connect delivers 99.9% uptime, backed by carrier-grade redundancy and failover architecture built into the core infrastructure.",
+            "iQ Connect’s convergent billing engine supports prepaid, postpaid, and hybrid models. It’s flexible and fully PCI-compliant, so you can adapt it to whichever business model fits your operation.",
     },
     {
-        question: "7. Does it include analytics to measure profitability by promo or carrier?",
+        question: "Does iQ Connect offer customer support for my subscribers?",
         answer:
-            "Yes. Real-time dashboards track churn, ARPU, and sales velocity, so you can see which T-Mobile or Xfinity promos are actually profitable before the day ends.",
+            "Yes. You can access a team of trained wireless customer support specialists who handle subscriber inquiries on your behalf, maintaining your brand voice throughout every interaction. This reduces your operational burden without sacrificing the customer experience.",
     },
     {
-        question: "8. Is iQ Connect only for MVNOs, or does it support IoT and M2M devices too?",
+        question: "What is the Kiosk and what does it do?",
         answer:
-            "Both. Beyond traditional MVNO operations, the platform includes robust connectivity management for IoT and M2M — built for next-generation device networks.",
+            "The Kiosk is a self-service station you can deploy at retail locations, allowing customers to complete activations and top-ups without staff involvement. It’s fully brandable, easy to operate, and integrates directly with your MVNO platform.",
     },
     {
-        question: "9. What kind of support do I get after implementation?",
+        question: "Can I integrate iQ Connect with my existing systems?",
         answer:
-            "Every client is assigned a Dedicated Support Expert who acts as an extension of your team, providing hands-on billing support as your operation scales.",
+            "Yes. iQ Connect offers a robust API suite with developer-friendly documentation and dedicated technical support. You can automate workflows, sync data in real time, and build fully custom experiences on top of the platform.",
     },
     {
-        question: "10. Is iQ Connect suitable for small operators, or only large enterprises?",
+        question: "What kind of analytics does the platform provide?",
         answer:
-            "It’s built to scale with you. Whether you’re a single-location retailer or managing a complex distribution network, the platform adapts to the size and needs of your operation.​​​​​​​​​​​​​​​​",
+            "You get access to real-time dashboards with metrics including revenue, activations, churn, ARPU, and usage patterns. Reports are exportable and you can set up customizable alerts to make data-driven decisions before the day is over.",
+    },
+    {
+        question: "What uptime can I expect from the platform?",
+        answer:
+            "iQ Connect is built with redundancy and failover at its core, guaranteeing 99.9% uptime for both activations and the billing system.",
+    },
+    {
+        question: "Do I get a dedicated point of contact or just a generic support queue?",
+        answer:
+            "Every iQ Connect client is assigned a Dedicated Support Expert who acts as an extension of your team. This isn’t impersonal ticket-based support — it’s someone who knows your operation and is actively involved as you grow and scale.",
+    },
+    {
+        question: "Can I run promotions without involving a developer?",
+        answer:
+            "Yes. From your dashboard you can create, schedule, and launch promotions including discounts, bonus data, referral rewards, and limited-time deals — all fully configurable with zero engineering effort required.",
+    },
+    {
+        question: "Is iQ Connect only for large operators or can smaller MVNOs use it too?",
+        answer:
+            "iQ Connect is built to support growth at every stage. Whether you’re launching your first MVNO or managing a multi-channel operation, the platform scales with you — reducing staffing, training, and support costs through centralized workflows and automation as you expand.",
     },
 ];
 
