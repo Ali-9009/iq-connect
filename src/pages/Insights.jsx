@@ -1,11 +1,8 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Insights() {
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] primary-background -z-1"></div>
-        <Header />
+
       <div className="px-2 pt-2">
 
         {/* hero section */}
@@ -224,8 +221,6 @@ function Insights() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

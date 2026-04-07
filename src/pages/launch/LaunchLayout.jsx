@@ -1,6 +1,4 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 function LaunchLayout() {
   const location = useLocation();
@@ -20,8 +18,7 @@ function LaunchLayout() {
 
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] primary-background -z-1"></div>
-        <Header />
+    
       <div className="px-2 pt-2 ">
 
         {/* hero section */}
@@ -51,8 +48,6 @@ function LaunchLayout() {
       <div className="mt-10 px-4">
         <Outlet />
       </div>
-
-      <Footer />
     </main>
   );
 }

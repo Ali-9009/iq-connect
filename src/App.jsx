@@ -17,9 +17,12 @@ import Step4 from "./pages/launch/Step4";
 import Step5 from "./pages/launch/Step5";
 import Step6 from "./pages/launch/Step6";
 import Insights from "./pages/Insights";
-import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./Layouts/Layout";
 import IntegratedPartners from "./pages/IntegratedPartners";
+import WirelessSolution from "./pages/WirelessSolution";
+import RetailWebsite from "./pages/RetailWebsite";
+import ApiSolution from "./pages/ApiSolution";
+import VirtualCreditCards from "./pages/VirtualCreditCards";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
       { path: "/solutions/kiosk", element: <Kiosk /> },
       { path: "/solutions/distribution-portal", element: <DistributionPortal /> },
       { path: "/solutions/taxation-&-regulatory-solutions", element: <TaxationAndRegulatorySolutions /> },
+      { path: "/services/Wireless-Solution", element: <WirelessSolution /> },
+      { path: "/services/retail-website-+-mobile-app", element: <RetailWebsite /> },
+      { path: "/services/Api-Solution", element: <ApiSolution /> },
+      { path: "/services/Virtual-Credit-Cards", element: <VirtualCreditCards /> },
       { path: "/launch", element: <LaunchLayout />, children: [
         { index: true, element: <Step1 /> },
         { path: "step-2", element: <Step2 /> },

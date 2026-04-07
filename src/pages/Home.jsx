@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Smartphone, Store, Server, Cpu } from "lucide-react";
+
 import ScheduleButton from "../components/Buttons/ScheduleButton";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import WhyIQConnect from "../components/WhyIQConnect";
 import ScheduleModel from "../components/Models/ScheduleModel";
 import CtaSection from "../components/CtaSection";
@@ -63,9 +63,6 @@ function Home() {
 
   return (
     <main className="relative">
-   
-      <div className="absolute  w-full h-screen primary-background -z-1"></div>
-      <Header />
 
       <div className="px-2 pt-2 ">
         
@@ -269,6 +266,86 @@ function Home() {
         </div>
       </section> */}
 
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-white border-l-8 border-blue-500 rounded-lg shadow-lg p-8 transform transition duration-700 hover:scale-105">
+            <h2 className="secondary-heading">
+              Activations &amp; Provisioning
+            </h2>
+            <p className="para1 mb-4">
+              Real-time domestic and international routing for <span className="font-semibold text-blue-600">AT&T</span>, <span className="font-semibold text-blue-600">T-Mobile</span>, and <span className="font-semibold text-blue-600">Verizon MVNOs</span> — plus any GSM or CDMA carrier. One interface. No limits on scale.
+            </p>
+            <p className="para1 mb-4">
+              <span className="font-semibold text-blue-600">iQ Connect</span> is the system running behind the MVNOs that are actually growing. We connect carrier networks to your day-to-day operations — no friction, no unnecessary layers in between.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 ">
+
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="secondary-heading mb-4 text-center">
+            Who We Serve
+          </h2>
+
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {/* Card 1 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-6 shadow-md">
+                <Smartphone size={32} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">AT&T, T-Mobile & Verizon MVNO Partners</h3>
+              <p className="text-gray-600 text-sm">
+                Get pre-integrated access to all three major carriers and launch without spending weeks on setup.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-600 mb-6 shadow-md">
+                <Store size={32} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Distributors & Retailers</h3>
+              <p className="text-gray-600 text-sm">
+                Handle complex distribution hierarchies with real-time commissions across GSM and CDMA models.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-6 shadow-md">
+                <Server size={32} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Digital Marketplaces</h3>
+              <p className="text-gray-600 text-sm">
+                API-ready integration for high-volume telecom billing that plugs into your existing operation.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 mb-6 shadow-md">
+                <Cpu size={32} />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">IoT & M2M</h3>
+              <p className="text-gray-600 text-sm">
+                Connectivity management built for next-gen devices — designed to scale from day one.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 text-center">
+        <h1 className="secondary-heading">
+          SECTION: MVNO Creator — Value Prop
+        </h1>
+        <p className="para1 mx-auto max-w-214 ">
+          <strong>Building an MVNO?</strong> This is your system. You bring the brand. We handle the lines, activations, commissions, and distribution — all from one place. Whether you're selling direct to consumers or running a B2B operation, iQ Connect gives you the full stack without stitching together multiple platforms.
+        </p>
+      </section>
+
       <Feature />
 
       <FAQ />
@@ -276,8 +353,6 @@ function Home() {
       <Testimonials />
 
       <CtaSection />
-
-      <Footer />
     </main>
   );
 }

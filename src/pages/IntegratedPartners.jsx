@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import FAQ from "../components/Faqs";
 import CounterX from "../components/Counter";
 
@@ -127,8 +125,6 @@ const cards = [
 const IntegrationPartners = () => {
     return (
         <>
-            <Header />
-
             <section className="hero-section">
                 <h1 className="primary-heading">
                     Why Partner Integrations
@@ -266,9 +262,6 @@ const IntegrationPartners = () => {
             <CounterX />
 
             <FAQ />
-
-            <Footer />
-
         </>
 
     );

@@ -1,11 +1,9 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+
 
 function Terms() {
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] primary-background -z-1"></div>
-        <Header />
+
       <div className="px-2 pt-2 max-w-7xl mx-auto">
 
         <section className="px-3 md:px-8 lg:pt-12 lg:py-0 py-12">
@@ -131,8 +129,6 @@ function Terms() {
           </div>
         </section>
       </div>
-
-      <Footer />
     </main>
   );
 }

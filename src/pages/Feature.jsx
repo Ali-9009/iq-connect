@@ -44,7 +44,7 @@ function Feature() {
 
       <div className="px-2 pt-2 ">
         <section className="hero-section">
-          <h1 className="primary-heading">
+          <h1 className="secondary-heading">
             Everything You Need to Operate and Scale an MVNO
           </h1>
           <p className="para1 max-w-184 italic">

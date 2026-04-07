@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import ScheduleButton from "../components/Buttons/ScheduleButton";
 import ScheduleModel from "../components/Models/ScheduleModel";
-import { useNavigate } from "react-router-dom";
 
 function TaxationAndRegulatorySolutions() {
   const navigate = useNavigate();
   const [isOpenSchedule, setIsOpenSchedule] = useState(false);
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-screen primary-background -z-1"></div>
-        <Header />
       <div className="px-2 pt-2 ">
 
         {/* hero section */}
@@ -311,8 +308,6 @@ function TaxationAndRegulatorySolutions() {
           </button>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

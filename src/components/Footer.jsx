@@ -32,11 +32,11 @@ export default function Footer() {
             <div className="max-sm:col-span-2  ">
               <h3 className="font-semibold md:text-lg mb-5">Quick Links</h3>
               <ul className="space-y-3 font-light text-xs sm:text-sm">
-                <li><Link to='/'>HOME</Link></li>
-                <li><Link to='/launch'>LAUNCH YOUR MVNO</Link></li>
-                  <li><Link to='/integratedPartners'>INTEGRATED PARTNERS</Link></li>
-                <li><Link to='/contact'>CONTACT US</Link></li>
-                <li><Link to='/insights'>BLOG</Link></li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/launch'>Launch Your MVNO</Link></li>
+                  <li><Link to='/integratedPartners'>Integrated Partners</Link></li>
+                <li><Link to='/contact'>Contact Us</Link></li>
+                <li><Link to='/insights'>Blog</Link></li>
               </ul>
             </div>
 
@@ -44,9 +44,10 @@ export default function Footer() {
             <div className="max-sm:col-span-2 ">
               <h3 className="font-semibold md:text-lg mb-5">Services</h3>
               <ul className="space-y-3 font-light text-xs sm:text-sm">
-                <li><Link to="/solutions/distribution-portal">DISTRIBUTION PORTAL</Link></li>
-                <li><Link to="/solutions/taxation-&-regulatory-solutions">TAXATION & REGULATORY SOLUTIONS</Link></li>
-                <li><Link to="/solutions/kiosk">KIOSK</Link></li>
+                  <li><Link to="/services/Wireless-Solution">Wireless Solution</Link></li>
+                  <li><Link to="/services/retail-website-+-mobile-app">Retail Website + Mobile App</Link></li>
+                  <li><Link to="/services/Api-Solution">Api Solution</Link></li>
+                  <li><Link to="/services/Virtual-Credit-Cards">Virtual Credit Cards</Link></li>
               </ul>
             </div>
 
@@ -55,8 +56,8 @@ export default function Footer() {
               <div className=" ">
               <h3 className="font-semibold md:text-lg mb-5">Terms</h3>
               <ul className="space-y-3 font-light text-xs sm:text-sm">
-                <li><Link to="/privacy-policy">PRIVACY POLICY</Link></li>
-                <li><Link to="/terms-and-conditions">TERMS OF SERVICE</Link></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link to="/terms-and-conditions">Term of Services</Link></li>
                 <li><Link to="/dmca">DMCA</Link></li>
               </ul>
             </div>

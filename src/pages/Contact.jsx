@@ -1,12 +1,9 @@
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 function Contact() {
   return (
     <main className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] primary-background -z-1"></div>
-        <Header />
+
       <div className="px-2 pt-2 ">
 
         {/* hero section */}
@@ -130,8 +127,6 @@ function Contact() {
           </div>
         </section>
       </div>
-
-      <Footer />
     </main>
   );
 }

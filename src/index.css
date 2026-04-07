@@ -23,7 +23,7 @@
 
   /* sections */
   .section {
-    @apply lg:mt-16 md:mt-12 mt-10;
+    @apply lg:mt-12 mt-8;
   }
 
   .main-section {
