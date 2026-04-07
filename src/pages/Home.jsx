@@ -109,13 +109,13 @@ function Home() {
 
       <section className="w-full bg-(--primary-color) text-white py-12 mt-4">
         <div className="main-section grid md:grid-cols-2 gap-12 items-center">
-          {/* LEFT — Image */}
+          {/* LEFT Image */}
           <div className="flex justify-center md:justify-center">
             <img src="/images/dashboard.jpg" // 👈 apni image path yahan do alt="Dashboard Preview"
               className="w-full max-w-lg rounded-2xl" />
           </div>
 
-          {/* RIGHT — Content */}
+          {/* RIGHT Content */}
           <div className="space-y-6 ">
             <h1 className="secondary-heading text-white">
               One Unified Interface. Infinite Scalability.
@@ -273,10 +273,10 @@ function Home() {
               Activations &amp; Provisioning
             </h2>
             <p className="para1 mb-4">
-              Real-time domestic and international routing for <span className="font-semibold text-blue-600">AT&T</span>, <span className="font-semibold text-blue-600">T-Mobile</span>, and <span className="font-semibold text-blue-600">Verizon MVNOs</span> — plus any GSM or CDMA carrier. One interface. No limits on scale.
+              Real-time domestic and international routing for <span className="font-semibold text-blue-600">AT&T</span>, <span className="font-semibold text-blue-600">T-Mobile</span>, and <span className="font-semibold text-blue-600">Verizon MVNOs</span> plus any GSM or CDMA carrier. One interface. No limits on scale.
             </p>
             <p className="para1 mb-4">
-              <span className="font-semibold text-blue-600">iQ Connect</span> is the system running behind the MVNOs that are actually growing. We connect carrier networks to your day-to-day operations — no friction, no unnecessary layers in between.
+              <span className="font-semibold text-blue-600">iQ Connect</span> is the system running behind the MVNOs that are actually growing. We connect carrier networks to your day-to-day operations no friction, no unnecessary layers in between.
             </p>
           </div>
         </div>
@@ -330,7 +330,7 @@ function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">IoT & M2M</h3>
               <p className="text-gray-600 text-sm">
-                Connectivity management built for next-gen devices — designed to scale from day one.
+                Connectivity management built for next-gen devices designed to scale from day one.
               </p>
             </div>
           </div>
@@ -339,10 +339,10 @@ function Home() {
 
       <section className="max-w-6xl mx-auto px-6 text-center">
         <h1 className="secondary-heading">
-          SECTION: MVNO Creator — Value Prop
+          SECTION: MVNO Creator Value Prop
         </h1>
         <p className="para1 mx-auto max-w-214 ">
-          <strong>Building an MVNO?</strong> This is your system. You bring the brand. We handle the lines, activations, commissions, and distribution — all from one place. Whether you're selling direct to consumers or running a B2B operation, iQ Connect gives you the full stack without stitching together multiple platforms.
+          <strong>Building an MVNO?</strong> This is your system. You bring the brand. We handle the lines, activations, commissions, and distribution all from one place. Whether you're selling direct to consumers or running a B2B operation, iQ Connect gives you the full stack without stitching together multiple platforms.
         </p>
       </section>
 
